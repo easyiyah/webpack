@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script src='./CommonJs/bundle.js' type="text/javascript"></script>
+	<script src='./AMD/libs/require.js' data-main='./AMD/Js/app.js' ></script>
+</body>
+</html>
+<!-- 
+什么是模块化？
+模块化是指 j 将一个复杂的系统分解为多个模块，方便编码。
+为什么要用模块化？
+降低复杂性，降低代码耦合度，部署方便，提高效率。
+高内聚，低耦合
+a与b模块互不影响，通过暴露接口进行联系
+
+模块化规范
+1，CommonJs
+据CommonJs规范规定每一个Js文件都可以看作一个模块，其内部定义的变量是属于这个模块的，不会对外暴露，也就是说不会污染全局变量。该规范最初用在服务器端的node环境中。
+
+CommonJS采用同步加载不同模块文件，适用于服务器端的。因为模块文件都存放在服务器的各个硬盘上，读取加载时间快，适合服务器端，不适应浏览器。
+
+浏览器不兼容CommonJs，原因是浏览器缺少module、exports、require、global四个环境变量。如要使用需要工具转换。
+2，AMD
+AMD规范则是异步加载模块，允许指定回调函数。等模块异步加载完成后即可调用回调函数。
+AMD得意的产出就是require.js
+
+3，CMD
+
+ -->
